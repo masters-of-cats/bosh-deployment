@@ -21,6 +21,12 @@
     release: garden-runc
 
 - type: replace
+  path: /instance_groups/name=bosh/jobs/-
+  value:
+    name: containerd
+    release: garden-runc
+
+- type: replace
   path: /instance_groups/name=bosh/jobs/name=garden/properties?/garden
   value:
     listen_network: tcp
